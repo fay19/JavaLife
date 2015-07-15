@@ -150,26 +150,26 @@ public class WorldTest {
 				+ "7 ..........\n" + "8 ..........\n" + "9 ..........\n";
 		assertEquals(expected, observed);
 	}
-	
+
 	//Test the percent of live cells are 100
 	//Set the size as 10, which means a 10*10 matrix
 	//Set iteration as zero
 	//Set the live cell percent as 100
 	//The result string should be as expected
-		@Test
-		public void testAllLiveCellWorld(){
-			World w = new World(10, 4, 100);
-			String observed = w.toString();
-			String expected = "  0123456789\n" + "0 XXXXXXXXXX\n"
-					+ "1 XXXXXXXXXX\n" + "2 XXXXXXXXXX\n" + "3 XXXXXXXXXX\n"
-					+ "4 XXXXXXXXXX\n" + "5 XXXXXXXXXX\n" + "6 XXXXXXXXXX\n"
-					+ "7 XXXXXXXXXX\n" + "8 XXXXXXXXXX\n" + "9 XXXXXXXXXX\n";
-			assertEquals(expected, observed);
-		}
+	@Test
+	public void testAllLiveCellWorld(){
+		World w = new World(10, 4, 100);
+		String observed = w.toString();
+		String expected = "  0123456789\n" + "0 XXXXXXXXXX\n"
+				+ "1 XXXXXXXXXX\n" + "2 XXXXXXXXXX\n" + "3 XXXXXXXXXX\n"
+				+ "4 XXXXXXXXXX\n" + "5 XXXXXXXXXX\n" + "6 XXXXXXXXXX\n"
+				+ "7 XXXXXXXXXX\n" + "8 XXXXXXXXXX\n" + "9 XXXXXXXXXX\n";
+		assertEquals(expected, observed);
+	}
 
 	//Test with a negative size world
-    //Set the size a negative number
-    //Set iteration as zero
+	//Set the size a negative number
+	//Set iteration as zero
 	//This should throw an exception
 	@Test(expected = Exception.class)
 	public void testNegativeSize() {

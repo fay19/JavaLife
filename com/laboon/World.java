@@ -110,47 +110,27 @@ public class World {
 	}
 
 	/**
-	 * Convert this World to a string for display.
-	 * @return String representation of world
-	 */
-	
-	public String toString() {
-		String toReturn = "  ";
-		for (int j= 0; j < _size; j++) {
-			toReturn += String.valueOf(j % 10);
-		}
-		toReturn += "\n";
-		for (int j = 0; j < _size; j++ ) {
-			toReturn += String.valueOf(j % 10) + " ";
-			for (int k = 0; k < _size; k++) {
-				toReturn += (_world[j][k].getStateRep());
-			}
-			toReturn += "\n";
-		}
-		return toReturn;
-	}
-	/**
 	 * Refactoring method toString() using StringBuilder instead of using String, which cost much less CPU
 	 * Convert this World to a string for display.
 	 * @return String representation of world
 	 */
-//	public String toString() {
-//		StringBuilder toReturn = new StringBuilder();
-//		toReturn.append("  ");
-//		for (int j= 0; j < _size; j++) {
-//			toReturn.append(String.valueOf(j % 10));
-//		}
-//		toReturn.append("\n");
-//		for (int j = 0; j < _size; j++ ) {
-//			toReturn.append(String.valueOf(j % 10) + " ");
-//			for (int k = 0; k < _size; k++) {
-//				toReturn.append(_world[j][k].getStateRep());
-//			}
-//			toReturn.append("\n");
-//		}
-//		String s = toReturn.toString();
-//		return s;
-//	}
+	public String toString() {
+		StringBuilder toReturn = new StringBuilder();
+		toReturn.append("  ");
+		for (int j= 0; j < _size; j++) {
+			toReturn.append(String.valueOf(j % 10));
+		}
+		toReturn.append("\n");
+		for (int j = 0; j < _size; j++ ) {
+			toReturn.append(String.valueOf(j % 10) + " ");
+			for (int k = 0; k < _size; k++) {
+				toReturn.append(_world[j][k].getStateRep());
+			}
+			toReturn.append("\n");
+		}
+		String s = toReturn.toString();
+		return s;
+	}
 	/**
 	 * Generate initial game board.
 	 * @param size Size of board
